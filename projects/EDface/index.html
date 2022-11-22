@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="EDFace-Celeb-1M.">
+  <meta name="keywords" content="Image Face Dataset, Paired data, Face Super Resolution">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EDFace-Celeb-1M</title>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+  <style>
+    #pic_list {
+      display: block;
+      white-space: nowrap;
+      overflow: auto;
+    }
+
+    #pic_list li {
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://github.com/HDCVLab/EDFace-Celeb-1M"> 
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">   
+              <font color="Tomato">DFace-Celeb-1M</font>: Benchmarking <font color="Tomato">F</font>ace-<font color="Tomato">H</font>allucination
+              with a <font color="Tomato">M</font>illion-scale Dataset
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?user=eqwDXdMAAAAJ&hl=zh-CN">Kaihao Zhang</a>
+                <sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?user=h5XtaUUAAAAJ&hl=zh-CN">Dongxu Li</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?user=g20Q12MAAAAJ&hl=zh-CN">Wenhan Luo</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="">Jingyu Liu</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?user=Z_UoQFsAAAAJ&hl=zh-CN">Jiankang Deng</a><sup>4</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?user=AjxoEpIAAAAJ&hl=zh-CN">Wei Liu</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://scholar.google.com.hk/citations?user=QKOH5iYAAAAJ&hl=zh-CN">Stefanos Zafeiriou</a><sup>4</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Australian National University,</span>
+              <span class="author-block"><sup>2</sup>Sun Yat-sen University,</span>
+              <span class="author-block"><sup>3</sup>Tencent,</span>
+              <span class="author-block"><sup>4</sup>Imperial College London</span>
+              
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9793600"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2110.05031.pdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+     <div class="container is-max-desktop">
+
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <div class="content has-text-justified">
+            <img src="./static/images/LQ_HQ.png" class="interpolation-image"
+              alt="Interpolation end reference image." />
+          <div class="content has-text-centered">
+            <p >Sample paired images from the <b>synthetic</b> part of our proposed EDFace-Celeb-1M dataset. The left images are low-resolution face images and the right images are high-resolution ones.</p>
+          </div>
+          </div>
+          <div class="content has-text-justified">
+            <img src="./static/images/Real_word.png" class="interpolation-image"
+              alt="Interpolation end reference image." />
+            <div class="content has-text-centered">
+             <p >Sample paired images from the <b>real-world</b> part of our proposed EDFace-Celeb-1M dataset. </p>
+            </div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Recent deep face hallucination methods show stunning performance in super-resolving severely degraded facial images,
+              even surpassing human ability. However, these algorithms are mainly evaluated on non-public synthetic datasets. It is thus unclear
+              how these algorithms perform on public face hallucination datasets. Meanwhile, most of the existing datasets do not well consider
+              the distribution of races, which makes face hallucination methods trained on these datasets biased toward some specific races. To
+              address the above two problems, in this paper, we build a public Ethnically Diverse Face dataset, EDFace-Celeb-1M, and design a
+              benchmark task for face hallucination. Our dataset includes 1:7 million photos that cover different countries, with relatively balanced
+              race composition. To the best of our knowledge, it is the largest-scale and publicly available face hallucination dataset in the wild.
+              Associated with this dataset, this paper also contributes various evaluation protocols and provides comprehensive analysis to benchmark
+              the existing state-of-the-art methods. The benchmark evaluations demonstrate the performance and limitations of state-of-the-art
+              algorithms. https://github.com/HDCVLab/EDFace-Celeb-1M
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!-- Statistics. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Statistics</h2>
+          <div class="content has-text-justified">
+            <img src="static/images/statistics.png" class="interpolation-image"
+              alt="Interpolation end reference image." />
+              <div class="content has-text-centered">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!-- Statistics. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Benchmarking Results</h2>
+          <div class="content has-text-justified">
+            <img src="static/images/benchmarking_results.png" class="interpolation-image"
+              alt="Interpolation end reference image." />
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths"> -->
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 "> Dataset</h2>
+          <div class="content has-text-justified">
+            <p class="text-justify">It consists of two sub-datasets, i.e., EDFace-Celeb-1M and EDFace-Celeb-150K datasets. Each of the sub-datasets provides different settings for face super-resolution (FH128, FH512) and face hallucination (FH128, FH512).
+             We share the links of dataset in both baidu drive and google drive.
+            </p>
+            <div>
+              <table>
+                <tr>
+                  <td>
+                    <figure>
+                      <img src="static/images/folders.png" , width="30%"><br><br>
+                      <ul>
+                        <li>
+                          EDFace-Celeb-1M(128): <a
+                            href="https://pan.baidu.com/share/init?surl=MnXxwjEYoB6wiTxB5o7IQQ"
+                            target="_blank">
+                            <strong>百度网盘</strong></a>
+                        </li>
+                        <li>
+                          EDFace-Celeb-150K(512): <a
+                            href="https://pan.baidu.com/share/init?surl=7N-FOJPErKvYKSTlVVThwQ"
+                            target="_blank">
+                            <strong>百度网盘</strong></a>
+                        </li>
+                      </ul>
+                    </figure>
+                  </td>
+
+                  <td>
+                    <figure>
+                      <!-- <a href="https://github.com/CelebV-HQ/CelebV-HQ/blob/main/celebvhq_info.json">
+                    <img src="static/img/download_icon.jpeg" height="80px" width="100px" alt="download">
+                    <figcaption> Annotations </figcaption>
+                  </a> -->
+                  <img src="static/images/folders.png" , width="30%"><br><br>
+                      <ul>
+                        <li>
+                          EDFace-Celeb-1M(128): <a
+                            href="https://drive.google.com/drive/folders/15VkFMZtKQpCFRfgXL5YJc8GB8Q2qj_Fn"
+                            target="_blank"><strong>GDrive</strong></a>
+                        </li>
+                        <li>
+                          EDFace-Celeb-150K(512): <a
+                            href="https://drive.google.com/drive/folders/1YELx5WtV-A1i8WSVrWhKLzi78KQ7tlty"
+                            target="_blank">
+                            <strong>GDrive</strong></a>
+                        </li>
+
+                      </ul>
+                      </span>
+                    </figure>
+                  </td>
+
+                 
+                </tr>
+              </table>
+            </div>
+          </div>
+          <h2 class="title is-4 "> Benchmark Results </h2>
+          <div class="content has-text-justified">
+            <table border="1">
+              <thead>
+                <tr>
+                  <th align="left">Method</th>
+                  <th align="left">Links</th>
+                  <th align="left">Description</th>
+                  <!-- <th align="left">Link</th> -->
+                </tr>
+              </thead>
+              <tbody>  
+                <tr>
+                  <td align="left">DICNet</td>
+                  <td align="left"><a href="https://drive.google.com/drive/folders/12K6V16MXz9Qupuh44cua-2scrAxM1GWV"
+                    rel="nofollow">DGrive</a></td>
+                  <td align="left">Deep Iterative Collaboration
+                    Network</td>
+                </tr>
+                <tr>
+                  <td align="left">DICGAN</td>
+                      <td align="left"><a href="https://drive.google.com/drive/folders/12K6V16MXz9Qupuh44cua-2scrAxM1GWV"
+                        rel="nofollow">DGrive</a></td>
+                  <td align="left">Deep Iterative Collaboration GAN</td>
+                </tr>
+
+                <tr>
+                  <td align="left">WaveletSR</td>
+                      <td align="left"><a href="https://drive.google.com/drive/folders/12K6V16MXz9Qupuh44cua-2scrAxM1GWV"
+                        rel="nofollow">DGrive</a></td>
+                  <td align="left">Wavelet-based Super-Resolution Network
+                  </td>
+                </tr>
+
+                <tr>
+                  <td align="left">HiFaceGAN</td>
+                      <td align="left"><a href="https://drive.google.com/drive/folders/12K6V16MXz9Qupuh44cua-2scrAxM1GWV"
+                        rel="nofollow">DGrive</a></td>
+                  <td align="left"> HiFaceGAN
+                  </td>
+                </tr>
+                <tr>
+                  <td align="left">EDSR</td>
+                      <td align="left"><a href="https://drive.google.com/drive/folders/12K6V16MXz9Qupuh44cua-2scrAxM1GWV"
+                        rel="nofollow">DGrive</a></td>
+                  <td align="left">Enhanced deep residual networks</td>
+                </tr>
+                
+                <tr>
+                  <td align="left">RDN</td>
+                      <td align="left"><a href="https://drive.google.com/drive/folders/12K6V16MXz9Qupuh44cua-2scrAxM1GWV"
+                        rel="nofollow">DGrive</a></td>
+                  <td align="left">Residual Dense Network</td>
+                </tr>
+
+                <tr>
+                  <td align="left">RCAN</td>
+                      <td align="left"><a href="https://drive.google.com/drive/folders/12K6V16MXz9Qupuh44cua-2scrAxM1GWV"
+                        rel="nofollow">DGrive</a></td>
+                  <td align="left">Residual Channel Attention Network</td>
+                </tr>
+
+                <tr>
+                  <td align="left">HAN</td>
+                      <td align="left"><a href="https://drive.google.com/drive/folders/12K6V16MXz9Qupuh44cua-2scrAxM1GWV"
+                        rel="nofollow">DGrive</a></td>
+                  <td align="left">Holistic Attention Network</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr />
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3 ">Agreement</h2>
+          <div class="content has-text-justified">
+
+            <ul>
+              <li> The EDFace-Celeb-1M dataset is only available to download for non-commercial research purposes. The copyright
+                remains with the original owners of the image. A complete
+                version of the license can be found <a href="https://github.com/HDCVLab/EDFace-Celeb-1M">here</a>. </li>
+              <li>You agree not to reproduce, duplicate, copy, sell, trade, resell or exploit for any
+                commercial purposes, any portion of the videos and any portion of derived data. You agree not to further
+                copy, publish or distribute any portion of the EDFace-Celeb-1M
+                dataset.</li>
+              <li>The distribution of identities in the EDFace-Celeb-1M datasets may not be representative of the global human
+                population. Please be careful of unintended societal, gender, racial and other biases when training or
+                deploying models trained on this data.</li>
+            </ul>
+
+  </section>
+
+  <hr />
+  <section class="section" id="Citaton">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <p>If you find this helpful, please cite our work: </p>
+      <pre><code>@article{zhang2022edface,
+        title={EDFace-Celeb-1 M: Benchmarking Face Hallucination with a Million-scale Dataset},
+        author={Zhang, Kaihao and Li, Dongxu and Luo, Wenhan and Liu, Jingyu and Deng, Jiankang and Liu, Wei and Zafeiriou, Stefanos},
+        journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+        year={2022}
+      }
+  </code></pre>
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <div class="columns is-centered">
+      <div class="content">
+        <p> This template is borrowed from <a href="https://github.com/nerfies/nerfies.github.io"> nerfies's
+            webpage</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    $(window).on('load', function () {
+      $('#loading').hide();
+    })
+  </script>
+
+</body>
+
+</html>
